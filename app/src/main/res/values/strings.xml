@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Detour</string>
+    <string name="question">This building is known
+        as the oldest building still standing in Africa and
+        was built between the years of 2667–2648 BC</string>
+    <string name="giza">Great Pyramid of Giza</string>
+    <string name="yeha">Yeha Temple</string>
+    <string name="djoser">Pyramid of Djoser</string>
+    <string name="prize1">Stand a chance to win a coupon to The Hut in Kigali!\n😋</string>
+</resources>
