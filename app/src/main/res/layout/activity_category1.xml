@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,322 +7,344 @@
     android:orientation="vertical"
     tools:context=".Category1Activity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="39dp"
-            android:layout_marginLeft="15dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/one"
-                android:layout_width="37dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/one" />
-
-            <RelativeLayout
-                android:layout_width="90dp"
-                android:layout_height="15dp"
-                android:background="@drawable/green_back"
-                android:layout_marginTop="14dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="level 1"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colortext"
-                    android:textSize="12sp"
-                    android:textStyle="italic"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="39dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="18dp">
-
-            <ImageView
-                android:id="@+id/coins"
-                android:layout_marginTop="8dp"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/coins" />
-
-            <RelativeLayout
-                android:layout_width="90dp"
-                android:layout_height="15dp"
-                android:background="@drawable/green_back"
-                android:layout_marginTop="14dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textAllCaps="false"
-                    android:textColor="@color/colortext"
-                    android:textSize="12sp"
-                    android:textStyle="italic"
-                    android:layout_centerInParent="true"/>
-            </RelativeLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <RelativeLayout
-            android:id="@+id/qtn_change"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/round"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_centerInParent="true"
-                app:srcCompat="@drawable/switcharrows" />
 
-            <ImageView
-                android:id="@+id/question_mark"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/question"
-                android:layout_centerInParent="true"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/one"
+                    android:layout_width="37dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/one" />
+
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/green_back">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="level 1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colortext"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp">
+
+                <ImageView
+                    android:id="@+id/coins"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/coins" />
+
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/green_back">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colortext"
+                        android:textSize="12sp"
+                        android:textStyle="italic" />
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </RelativeLayout>
 
-        <androidx.cardview.widget.CardView
-            app:cardCornerRadius="10dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/qtn_change"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/round"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/switcharrows" />
+
+                <ImageView
+                    android:id="@+id/question_mark"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/question" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/green_back"
+                    android:orientation="horizontal">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="50dp">
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity=""
+                                android:text="ARCHITECTURE"
+                                android:textColor="@color/colortext"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="108dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text=" TROPICAL\nREGIONS"
+                                android:textColor="@color/colortext"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="90dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="WILDLIFE"
+                                android:textColor="@color/colortext"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/colorPrimary" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="100"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="100"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="100"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="3dp"
+                            android:background="@color/colorPrimary" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="300"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="300"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="300"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="3dp"
+                            android:background="@color/colorPrimary" />
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="500"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="500"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="500"
+                                android:textColor="@color/colortext"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+                    </TableLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/green_back"
-                android:orientation="horizontal">
-
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="50dp">
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp">
-                        <TextView
-                            android:layout_width="90dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="ARCHITECTURE"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:gravity=""/>
-
-                        <TextView
-                            android:layout_width="108dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:text=" TROPICAL\nREGIONS"
-                            android:textColor="@color/colortext"
-                            android:textSize="15dp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="90dp"
-                            android:layout_height="wrap_content"
-                            android:textSize="15dp"
-                            android:text="WILDLIFE"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:gravity="center"/>
-
-                    </TableRow>
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="4dp"
-                        android:background="@color/colorPrimary"
-                        android:layout_marginTop="5dp"/>
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:padding="15dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="100"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="100"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="100"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"/>
-
-                    </TableRow>
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="3dp"
-                        android:background="@color/colorPrimary"/>
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:padding="15dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="300"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="300"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="300"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"/>
-
-                    </TableRow>
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="3dp"
-                        android:background="@color/colorPrimary"/>
-
-                    <TableRow
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:padding="15dp"
-                        >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="500"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="500"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="20dp"
-                            android:text="500"
-                            android:textColor="@color/colortext"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"/>
-
-                    </TableRow>
-                </TableLayout>
-
-            </RelativeLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+                android:layout_margin="10dp">
 
 
                 <ImageView
                     android:id="@+id/person"
                     android:layout_width="90dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/person"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/person" />
 
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="Rick"
-                android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:layout_toRightOf="@id/person"
-                android:layout_margin="5dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="$ 100"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:layout_toRightOf="@id/person"
-                android:layout_below="@id/username"
-                android:layout_margin="5dp"/>
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/person"
+                    android:text="Rick"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/person"
+                    android:text="$ 100"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
+            </RelativeLayout>
+
+
+        </LinearLayout>
 
     </LinearLayout>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
