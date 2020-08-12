@@ -9,5 +9,7 @@
     <string name="prize1">Stand a chance to win a coupon to The Hut in Kigali!\n😋</string>
     <string name="sign">Create an account</string>
     <string name="newacc">Create a new account!</string>
-
+    <string name="advertvisitRwanda">#visitrwandasoon #rwanda #staysafe</string>
+    <string name="findMoreInfo">Find out more from</string>
+    <string name="advertvisitRwandaLink">https://www.visitrwanda.com </string>
 </resources>

@@ -102,7 +102,7 @@
             </RelativeLayout>
 
             <Button
-                android:id="@+id/createUserButton"
+                android:id="@+id/logInButton"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="false"
@@ -115,13 +115,13 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/loginTextView"
+                android:id="@+id/createAccountTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:text="@string/newacc"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>

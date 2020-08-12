@@ -1,4 +1,4 @@
- package com.example.detour2;
+package com.example.detour2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,22 +8,23 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
- public class Prize1Activity extends AppCompatActivity {
-    private ImageView mCancelImg;
-     private RelativeLayout relativeLayoutPlay;
+public class ClueActivity extends AppCompatActivity {
+    private ImageView cancelImg;
+    private RelativeLayout relativeLayoutPlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prize1);
+        setContentView(R.layout.activity_clue);
 
-        mCancelImg =(ImageView)findViewById(R.id.cancel);
+        cancelImg = (ImageView) findViewById(R.id.cancel);
         relativeLayoutPlay =(RelativeLayout) findViewById(R.id.relativeLayoutPlay);
 
-        mCancelImg.setOnClickListener(new View.OnClickListener() {
+
+        cancelImg.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Prize1Activity.this, Category1Activity.class);
+                Intent intent =new Intent(ClueActivity.this, Level1Activity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +32,7 @@ import android.widget.RelativeLayout;
         relativeLayoutPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Prize1Activity.this, Category1Activity.class);
+                Intent intent = new Intent(ClueActivity.this, Level1Activity.class);
                 startActivity(intent);
             }
         });
