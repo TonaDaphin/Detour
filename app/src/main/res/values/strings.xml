@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Detour</string>
+    <string name="facebook_app_id">1017369312056755</string>
+    <string name="fb_login_protocol_scheme">fb1017369312056755</string>
+
     <string name="question">This building is known
         as the oldest building still standing in Africa and
         was built between the years of 2667–2648 BC</string>
@@ -12,4 +15,7 @@
     <string name="advertvisitRwanda">#visitrwandasoon #rwanda #staysafe</string>
     <string name="findMoreInfo">Find out more from</string>
     <string name="advertvisitRwandaLink">https://www.visitrwanda.com </string>
+    <string name="loginFacebookButton">Sign In with Facebook</string>
+    <string name="verifyEmailTextView">verify your email</string>
+
 </resources>

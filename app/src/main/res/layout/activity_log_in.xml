@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -41,20 +42,44 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true">
 
-                <ImageView
-                    android:id="@+id/google"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/google" />
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="50dp"
-                    android:layout_toRightOf="@+id/google"
-                    android:src="@drawable/facebook" />
             </RelativeLayout>
 
         </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/customGButton"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:backgroundTint="#ffffff"
+                android:drawableLeft="@drawable/ic_icons8_google"
+                android:letterSpacing="0"
+                android:text="Log In with Google"
+                android:textColor="@color/colorblack"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/customFBbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:backgroundTint="@color/facebookBlue"
+                android:drawableLeft="@drawable/ic_icons8_facebook"
+                android:letterSpacing="0"
+                android:text="Log In with Facebook"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customGButton"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,11 +89,12 @@
             android:padding="30dp">
 
             <EditText
+                android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@android:color/white"
-                android:hint="Username"
+                android:hint="Email"
                 android:padding="10dp"
                 android:textColor="@android:color/black"
                 android:textColorHint="@color/lightgray"
@@ -78,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/pass"
+                android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -91,13 +117,14 @@
                 android:textSize="15sp" />
 
             <TextView
+                android:id="@+id/forgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="right"
-                android:text="Forgot?"
+                android:text="Forgot Password?"
                 android:textColor="@color/lightblue"
                 android:textSize="12sp"
-                android:layout_below="@+id/pass"
+                android:layout_below="@+id/passwordEditText"
                 android:layout_alignParentRight="true"/>
             </RelativeLayout>
 
@@ -108,7 +135,7 @@
                 android:layout_centerHorizontal="false"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/green_back"
+                android:backgroundTint="@color/colorPrimary"
                 android:padding="10dp"
                 android:text="Log In"
                 android:textColor="@color/colortext"

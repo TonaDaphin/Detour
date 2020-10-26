@@ -7,4 +7,6 @@
     <color name="colorblack">#000000</color>
     <color name="lightgray">#adadad</color>
     <color name="lightblue">#1FB4D4</color>
+    <color name="facebookBlue">#4267B3</color>
+    <color name="red">#ba332f</color>
 </resources>

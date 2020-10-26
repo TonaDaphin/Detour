@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.facebook.FacebookSdk;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;

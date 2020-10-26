@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:141035465478:android:5c9b8193d240d5a0918c87",
+        "mobilesdk_app_id": "1:141035465478:android:fb34d86a85e0af50918c87",
         "android_client_info": {
           "package_name": "com.example.detour"
         }
@@ -51,6 +51,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "141035465478-vluggke6afqcaj4ckquok8lspbarp0ne.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.detour2",
+            "certificate_hash": "082e0331850f8842220661cae0f9e6aaa5cfe528"
+          }
+        },
         {
           "client_id": "141035465478-75fbtttc5mvuvn9okser3vkg27c7m3lb.apps.googleusercontent.com",
           "client_type": 3
