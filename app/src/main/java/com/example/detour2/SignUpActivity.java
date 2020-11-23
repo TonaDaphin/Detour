@@ -46,6 +46,7 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.auth.SignInMethodQueryResult;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
 import com.facebook.FacebookSdk;
@@ -71,7 +72,6 @@ public class SignUpActivity extends AppCompatActivity{
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mAuthProgressDialog;
     private ProgressDialog progress;
-
 
     FirebaseFirestore fStore;
     String userID;
@@ -181,8 +181,6 @@ public class SignUpActivity extends AppCompatActivity{
         });
     }
 
-
-
     private void createAuthProgressDialog() {
         mAuthProgressDialog = new ProgressDialog(this);
         mAuthProgressDialog.setTitle("Loading...");
@@ -192,11 +190,11 @@ public class SignUpActivity extends AppCompatActivity{
 
 
     private void createNewUser(){
-
         final String email = mEmailEditText.getText().toString().trim();
         final String phoneNumber = mPhoneEditText.getText().toString().trim();
         final String username = mUsernameEditText.getText().toString().trim();
         final String password = mPasswordEditText.getText().toString().trim();
+
         mName = mUsernameEditText.getText().toString().trim();
 
         boolean validEmail = isValidEmail(email);
@@ -412,6 +410,35 @@ public class SignUpActivity extends AppCompatActivity{
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
+
+                            final FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
+
+                            for (UserInfo profile : mUser.getProviderData()) {
+
+                                String userName = profile.getDisplayName();
+                                String email = profile.getEmail();
+                                String phoneNumber = profile.getPhoneNumber();
+
+
+                                userID = mAuth.getCurrentUser().getUid();
+                                DocumentReference documentReference = fStore.collection("users").document(userID);
+                                Map<String, Object> users = new HashMap<>();
+                                users.put("Username", userName);
+                                users.put("Email", email);
+                                users.put("Phone", phoneNumber);
+
+                                documentReference.set(users).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "OnSuccess: user profile is created for " + userID);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Log.d(TAG, "OnFailure: " + e.toString());
+                                    }
+                                });
+                            }
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -441,6 +468,7 @@ public class SignUpActivity extends AppCompatActivity{
 
 
     private void firebaseAuthWithGoogle(String idToken) {
+
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -452,14 +480,43 @@ public class SignUpActivity extends AppCompatActivity{
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Toast.makeText(SignUpActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            updateUI(null);
-                        }
 
+                            final FirebaseUser mUser = FirebaseAuth.getInstance().getCurrentUser();
+
+                            for (UserInfo profile : mUser.getProviderData()) {
+
+                                String userName = profile.getDisplayName();
+                                String email = profile.getEmail();
+                                String phoneNumber = profile.getPhoneNumber();
+
+
+                                userID = mAuth.getCurrentUser().getUid();
+                                DocumentReference documentReference = fStore.collection("users").document(userID);
+                                Map<String, Object> users = new HashMap<>();
+                                users.put("Username", userName);
+                                users.put("Email", email);
+                                users.put("Phone", phoneNumber);
+
+                                documentReference.set(users).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "OnSuccess: user profile is created for " + userID);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Log.d(TAG, "OnFailure: " + e.toString());
+                                    }
+                                });
+                            }
+
+                            } else{
+                                // If sign in fails, display a message to the user.
+                                Log.w(TAG, "signInWithCredential:failure", task.getException());
+                                Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                        Toast.LENGTH_SHORT).show();
+                                updateUI(null);
+                            }
 
                     }
                 });
